@@ -6,7 +6,7 @@
 /*   By: damoncad <damoncad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 11:30:26 by damoncad          #+#    #+#             */
-/*   Updated: 2025/08/04 12:49:38 by damoncad         ###   ########.fr       */
+/*   Updated: 2025/08/04 12:58:54 by damoncad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,3 +76,49 @@ Fixed Fixed::operator-(const Fixed &other) const { return Fixed(this->toFloat() 
 Fixed Fixed::operator*(const Fixed &other) const { return Fixed(this->toFloat() * other.toFloat()); }
 Fixed Fixed::operator/(const Fixed &other) const { return Fixed(this->toFloat() / other.toFloat()); }
 
+//++a
+Fixed &Fixed::operator++()
+{
+    _value++;
+    return *this;
+}
+//a++
+Fixed Fixed::operator++(int)
+{
+    Fixed temp(*this);
+    ++(*this);
+    return temp;
+}
+//--a
+Fixed &Fixed::operator--()
+{
+    _value--;
+    return *this;
+}
+//a--
+Fixed Fixed::operator--(int)
+{
+    Fixed temp(*this);
+    --(*this);
+    return temp;
+}
+
+Fixed &Fixed::min(Fixed &a, Fixed &b)
+{
+    return (a < b) ? a : b;
+}
+
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
+{
+    return (a < b) ? a : b;
+}
+
+Fixed &Fixed::max(Fixed &a, Fixed &b)
+{
+    return (a > b) ? a : b;
+}
+
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
+{
+    return (a > b) ? a : b;
+}
