@@ -6,11 +6,12 @@
 /*   By: damoncad <damoncad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:24:12 by damoncad          #+#    #+#             */
-/*   Updated: 2025/09/15 20:07:14 by damoncad         ###   ########.fr       */
+/*   Updated: 2025/09/16 20:29:49 by damoncad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 /*int main() {
     ClapTrap a("Alpha");
@@ -22,10 +23,7 @@
     return 0;
 }*/
 
-
-#include "ClapTrap.hpp"
-
-int main() {
+/*t main() {
     std::cout << "===== CREAZIONE CLAPTRAP =====\n";
     ClapTrap a("Alpha");
     ClapTrap b("Bravo");
@@ -62,5 +60,27 @@ int main() {
     d.attack("target");    // dovrebbe stampare che non può attaccare (hp=0)
 
     std::cout << "\n===== FINE TEST =====\n";
+    return 0;
+}
+*/
+
+int main() {
+    std::cout << "---- Creating ScavTrap ----" << std::endl;
+    ScavTrap scav("Serena");
+
+    std::cout << "\n---- Testing attacks ----" << std::endl;
+    scav.attack("target dummy");
+
+    std::cout << "\n---- Special ability ----" << std::endl;
+    scav.guardGate();
+
+    std::cout << "\n---- Copy constructor ----" << std::endl;
+    ScavTrap copy(scav);
+
+    std::cout << "\n---- Copy assignment ----" << std::endl;
+    ScavTrap assigned;
+    assigned = scav;
+
+    std::cout << "\n---- Destruction order ----" << std::endl;
     return 0;
 }
