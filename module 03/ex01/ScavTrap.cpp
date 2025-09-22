@@ -6,7 +6,7 @@
 /*   By: damoncad <damoncad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 20:04:11 by damoncad          #+#    #+#             */
-/*   Updated: 2025/09/16 20:28:43 by damoncad         ###   ########.fr       */
+/*   Updated: 2025/09/22 21:16:06 by damoncad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ ScavTrap::ScavTrap(const std::string &n) : ClapTrap(n)
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
-    *this = other;
     std::cout << "ScavTrap copy constructor called for " << _name << std::endl;
 }
 
@@ -51,7 +50,7 @@ void ScavTrap::attack(const std::string &target)
     if (_energyPoints > 0 && _hitPoints > 0)
     {
         _energyPoints--;
-        std::cout << "ScavTrap " << _name << " ferociosly af attacks " << target
+        std::cout << "ScavTrap " << _name << " ferociously attacks " << target
                     << ", causing " << _attackDamage << " points of damage!" << std::endl;
     }
     else

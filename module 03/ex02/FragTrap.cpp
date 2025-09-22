@@ -6,7 +6,7 @@
 /*   By: damoncad <damoncad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 19:30:44 by damoncad          #+#    #+#             */
-/*   Updated: 2025/09/17 19:44:30 by damoncad         ###   ########.fr       */
+/*   Updated: 2025/09/22 21:16:06 by damoncad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 
 FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other)
 {
-    *this = other;
     std::cout << "FragTrap copy constructor called for " << _name << std::endl;
 }
 
