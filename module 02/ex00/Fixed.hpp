@@ -1,10 +1,10 @@
-#ifndef Fixed_HPP
-# define Fixed_HPP
+#ifndef FIXED_HPP
+# define FIXED_HPP
 # include <iostream>
 
 class Fixed {
 private:
-    int _rawBits;
+    int _value;
     static const int _fractionalBits = 8;
 
 public:
@@ -17,5 +17,6 @@ public:
     void setRawBits(int const raw);
 };
 
+std::ostream &operator<<(std::ostream &out, const Fixed &f);
 
 #endif
