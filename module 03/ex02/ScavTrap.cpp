@@ -6,7 +6,7 @@
 /*   By: damoncad <damoncad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 20:04:11 by damoncad          #+#    #+#             */
-/*   Updated: 2025/09/16 20:28:43 by damoncad         ###   ########.fr       */
+/*   Updated: 2025/09/23 21:13:39 by damoncad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ScavTrap::ScavTrap() : ClapTrap("Default ScavTrap")
     std::cout << "ScavTrap default constructor called for " << _name << std::endl;
 }
 
-ScavTrap::ScavTrap(const std::string &n) : ClapTrap(n)
+ScavTrap::ScavTrap(const std::string& n) : ClapTrap(n)
 {
     _hitPoints = 100;
     _energyPoints = 50;
@@ -28,13 +28,13 @@ ScavTrap::ScavTrap(const std::string &n) : ClapTrap(n)
     std::cout << "ScavTrap constructor called for " << _name << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other)
 {
     *this = other;
     std::cout << "ScavTrap copy constructor called for " << _name << std::endl;
 }
 
-ScavTrap &ScavTrap::operator=(const ScavTrap &other)
+ScavTrap &ScavTrap::operator=(const ScavTrap& other)
 {
     ClapTrap::operator=(other);
     std::cout << "ScavTrap copy assignment operator called" <<std::endl;
@@ -46,7 +46,7 @@ ScavTrap::~ScavTrap()
     std::cout << "ScavTrap destructor called for " << _name << std::endl;
 }
 
-void ScavTrap::attack(const std::string &target)
+void ScavTrap::attack(const std::string& target)
 {
     if (_energyPoints > 0 && _hitPoints > 0)
     {

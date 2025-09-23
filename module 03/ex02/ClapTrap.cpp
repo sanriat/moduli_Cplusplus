@@ -6,7 +6,7 @@
 /*   By: damoncad <damoncad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:24:08 by damoncad          #+#    #+#             */
-/*   Updated: 2025/09/15 20:01:36 by damoncad         ###   ########.fr       */
+/*   Updated: 2025/09/23 21:11:15 by damoncad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,19 @@ ClapTrap::ClapTrap() : _name("ClapTrap"), _hitPoints(10), _energyPoints(10), _at
     std::cout << "ClapTrap " << _name << " default constructed\n";
 }
 
-ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap(const std::string& name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
     std::cout << "ClapTrap " << _name << " constructed\n";
 }
 
-ClapTrap::ClapTrap(const ClapTrap &other) : _name(other._name),
+ClapTrap::ClapTrap(const ClapTrap& other) : _name(other._name),
     _hitPoints(other._hitPoints), _energyPoints(other._energyPoints),
     _attackDamage(other._attackDamage)
 {
     std::cout << "ClapTrap " << _name << " copy-constructed\n";
 }
 
-ClapTrap &ClapTrap::operator=(const ClapTrap &other)
+ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
     if (this != &other)
     {
@@ -47,7 +47,7 @@ ClapTrap::~ClapTrap()
     std::cout << "ClapTrap " << _name << " destructed\n";
 }
 
-void ClapTrap::attack(const std::string &target)
+void ClapTrap::attack(const std::string& target)
 {
     if (_hitPoints == 0)
     {

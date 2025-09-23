@@ -6,13 +6,13 @@
 /*   By: damoncad <damoncad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:24:12 by damoncad          #+#    #+#             */
-/*   Updated: 2025/09/16 20:29:06 by damoncad         ###   ########.fr       */
+/*   Updated: 2025/09/23 21:05:05 by damoncad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-/*int main() {
+int main() {
     ClapTrap a("Alpha");
     a.attack("Bandit");        // attacca (danno iniziale 0)
     a.takeDamage(3);           // perde 3 HP -> 7
@@ -20,9 +20,9 @@
     a.takeDamage(12);          // porta HP a 0 -> "dead"
     a.beRepaired(3);           // non può riparare (è morto)
     return 0;
-}*/
+}
 
-
+/*
 int main() {
     std::cout << "===== CREAZIONE CLAPTRAP =====\n";
     ClapTrap a("Alpha");
@@ -62,3 +62,4 @@ int main() {
     std::cout << "\n===== FINE TEST =====\n";
     return 0;
 }
+*/

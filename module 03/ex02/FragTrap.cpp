@@ -6,7 +6,7 @@
 /*   By: damoncad <damoncad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 19:30:44 by damoncad          #+#    #+#             */
-/*   Updated: 2025/09/22 21:16:06 by damoncad         ###   ########.fr       */
+/*   Updated: 2025/09/23 21:12:26 by damoncad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ FragTrap::FragTrap() : ClapTrap("DefaultFrag")
     std::cout << "FragTrap default constructor called for " << _name << std::endl;
 }
 
-FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
+FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 {
     this->_hitPoints = 100;
     this->_energyPoints = 100;
@@ -28,12 +28,12 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
     std::cout << "FragTrap constructor called for " <<this->_name << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other)
+FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other)
 {
     std::cout << "FragTrap copy constructor called for " << _name << std::endl;
 }
 
-FragTrap &FragTrap::operator=(const FragTrap &other)
+FragTrap& FragTrap::operator=(const FragTrap& other)
 {
     if (this != &other)
         ClapTrap::operator=(other);
