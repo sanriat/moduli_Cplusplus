@@ -16,7 +16,7 @@ public:
     Animal &operator=(const Animal &other);
     virtual ~Animal();
 
-    virtual void makeSound() const = 0; // funzione virtuale pura
+    virtual void makeSound() const = 0; // metodo virtuale puro
     std::string getType() const;
 };
 

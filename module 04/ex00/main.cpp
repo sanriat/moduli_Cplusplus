@@ -6,7 +6,7 @@
 /*   By: damoncad <damoncad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 19:08:48 by damoncad          #+#    #+#             */
-/*   Updated: 2025/09/18 20:29:13 by damoncad         ###   ########.fr       */
+/*   Updated: 2025/09/24 19:56:05 by damoncad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int main() {
     std::cout << j->getType() << std::endl;
     std::cout << i->getType() << std::endl;
 
-    i->makeSound(); // Cat sound
-    j->makeSound(); // Dog sound
-    meta->makeSound(); // Generic sound
+    i->makeSound();
+    j->makeSound();
+    meta->makeSound();
 
     delete meta;
     delete j;
@@ -40,8 +40,8 @@ int main() {
     std::cout << wrong->getType() << std::endl;
     std::cout << wrongCat->getType() << std::endl;
 
-    wrong->makeSound();     // generic
-    wrongCat->makeSound();  // generic, not overridden
+    wrong->makeSound();
+    wrongCat->makeSound();
 
     delete wrong;
     delete wrongCat;
